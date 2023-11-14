@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
+  background-color: #fefcf8;
+}
+
+.bg-grad {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    90deg,
+    rgba(254, 255, 239, 1) 0%,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(237, 255, 32, 0.648879620207458) 74%,
+    rgba(255, 255, 248, 1) 92%
+  );
+}
+
+.scroll-animation {
+  width: 10%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll 2s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
 }
