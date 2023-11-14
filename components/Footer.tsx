@@ -3,7 +3,7 @@ import Button from "./Button";
 import Image from "next/image";
 const Footer = () => {
   return (
-    <section className="bg-black">
+    <section className="bg-black py-10">
       <div className="mx-auto pt-10 justify-between items-center flex-col gap-5 text-white sm:flex-row  container flex ">
         <div className="w-1/4">
           <form>
