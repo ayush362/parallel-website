@@ -1,38 +1,58 @@
 import React from "react";
-import Image from "next/image";
 
-const Hero = () => {
+const HeroSection = () => {
+    const tags = [
+        "Autonomous",
+        "Bold",
+        "Colaborative",
+        "Curious",
+        "Design Driven",
+    ]
     return (
-        <section className="container mx-auto flex flex-col justify-center items-center md:mb-[-200px]">
-            <div className="">
-                <Image src="/woman.png" alt="lady" width={1500} height={800}/>
-            </div>
-            <div>
-                <h3 className="font-bold relative bottom-20 text-4xl  text-white lg:bottom-80  lg:right-20 lg:w-2/3  lg:text-6xl">
+        <section className="flex flex-col justify-center items-center bg-black relative">
+            <img className="absolute w-full h-full object-cover" src="/woman.png" alt="lady"/>
+            <div className="relative pt-48 pb-0 lg:py-32 container mx-auto w-full flex flex-col lg:p-5 gap-5">
+                <h3 className="font-bold text-5xl lg:text-4xl text-white lg:text-6xl lg:w-1/2 text-center lg:text-left pb-8 lg:pb-0">
                     Find your life's work
                 </h3>
-                <div className="flex flex-col items-center md:relative md:bottom-96 md:text-white font-bold ">
-                    <p className="text-center w-2/3 text-2xl">
-                        Instantly match with top startups to find the work that was made for
-                        you.
-                    </p>
-                    <form>
-                        <input
-                            placeholder="something@email.com"
-                            type="text"
-                            id="fname"
-                            name="fname"
-                            className="border-2 border-black my-5 py-6 mr-3 rounded-2xl px-8"
-                        />
-                        {/* <Button title="sign up" rounded="rounded-2xl" color="bg-yellow-400" /> */}
-                    </form>
-                    <button className="btn btn-yellow">
-                        Search →
-                    </button>
-                </div>
+                <FormSection tags={tags}/>
             </div>
         </section>
     );
 };
 
-export default Hero;
+const FormSection = ({tags}: { tags: string[] }) => {
+    return (
+        <div className="flex flex-col gap-5 items-center lg:items-start lg:text-white font-bold w-full lg:w-1/2 bg-white lg:bg-transparent pt-8 pb-8 px-5">
+            <p className="text-xl lg:text-2xl text-center lg:text-left w-2/3 lg:w-full">
+                Instantly match with top startups to find the work that was made for
+                you.
+            </p>
+            <form className="flex flex-col lg:flex-row w-full gap-5">
+                <div className="bg-white px-6 py-3 border rounded-xl flex justify-between">
+                    <input
+                        placeholder="something@email.com"
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        className="rounded-2xl"
+                    />
+                    <button className="border border-gray-500 w-7 h-7 text-black">
+                        S
+                    </button>
+                </div>
+                <button className="btn btn-yellow">
+                    Search →
+                </button>
+            </form>
+            <div className="flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                    <button
+                        className="bg-transparent text-white border border-black lg:border-white text-black lg:text-white rounded-full text-xs px-2 py-1">{tag}</button>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default HeroSection;

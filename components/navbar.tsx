@@ -1,17 +1,43 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
+
+    const links = [
+        {
+            title: "Jobs",
+            href: "/ayush"
+        },
+        {
+            title: "Startups",
+            href: "/startups"
+        },
+        {
+            title: "Collection",
+            href: "/collection"
+        },
+        {
+            title: "Learn",
+            href: "/learn"
+        },
+    ]
+
     return (
         <section className="flex container justify-between items-center mx-auto my-5 px-4">
-            <div className="flex items-center">
-                <Image src="/logo.png" alt="logo" width={120} height={50}/>
+            <div className="flex items-center gap-5">
+                <Link href="/">
+                    <Image src="/logo.png" alt="logo" width={120} height={50}/>
+                </Link>
                 <div className="md:flex  hidden">
                     <ul className="flex gap-4 font-bold">
-                        <li>Jobs</li>
-                        <li>Startups</li>
-                        <li>Collection</li>
-                        <li>Learn</li>
+                        {links.map((link) => (
+                            <li key={link.title}>
+                                <Link href={link.href}>
+                                    {link.title}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

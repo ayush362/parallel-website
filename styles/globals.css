@@ -42,7 +42,7 @@ body {
 }
 
 .btn-yellow {
-    @apply bg-yellow-400 text-white !important;
+    @apply bg-yellow-400 text-black !important;
 }
 
 .btn-yellow:hover {

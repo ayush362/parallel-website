@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = () => {
+const ContactSection = () => {
     return (
         <section className="bg-grad py-5 mt-5 px-5">
             <div className="scroll-animation">
@@ -31,4 +31,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default ContactSection;

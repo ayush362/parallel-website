@@ -1,17 +1,12 @@
+import {Layout} from "@/components/layout";
+
 const AyushPage = () => {
     return (
-        <div>
-            <h1>Test</h1>
-        </div>
+        <Layout>
+            <div className="container mx-auto">
+                <h1>Test</h1>
+            </div>
+        </Layout>
     )
 }
-
-const SecondComponent = () => {
-    return (
-        <div>
-            <h1>Test</h1>
-        </div>
-    )
-}
-
 export default AyushPage
