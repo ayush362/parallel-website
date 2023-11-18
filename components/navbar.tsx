@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Button from "./button";
 
 const Navbar = () => {
     return (
@@ -17,7 +16,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="flex gap-5">
-                <Button title="Sign up" className="rounded-2xl"/>
+                <button className="btn rounded-2xl">Sign Up</button>
                 <Image
                     src="/menu.svg"
                     alt="menu"

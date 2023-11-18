@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Button from "./button";
 
 const Hero = () => {
     return (
@@ -27,9 +26,9 @@ const Hero = () => {
                         />
                         {/* <Button title="sign up" rounded="rounded-2xl" color="bg-yellow-400" /> */}
                     </form>
-                    <Button className="rounded-2xl">
+                    <button className="btn btn-yellow">
                         Search →
-                    </Button>
+                    </button>
                 </div>
             </div>
         </section>

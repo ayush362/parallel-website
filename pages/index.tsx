@@ -1,24 +1,24 @@
 import Navbar from "@/components/navbar";
-import Hero from "@/components/hero";
-import Detail from "@/components/Detail/Detail";
-import Job from "@/components/Job/Job";
-import {Startup} from "@/components/startup/startup";
-import Vibe from "@/components/vibe";
+import Hero from "@/sections/hero";
 import Collection from "@/components/Collection/Collection";
 import Work from "@/components/work";
 import Faq from "@/components/Faq/Faq";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import {StartupSection} from "@/sections/startup";
+import {DetailSection} from "@/sections/detail";
+import {JobSection} from "@/sections/job";
+import VibeSection from "@/sections/vibe";
 
 export default function Home() {
     return (
         <main className="overflow-hidden">
             <Navbar/>
             <Hero/>
-            <Detail/>
-            <Job/>
-            <Startup/>
-            <Vibe/>
+            <DetailSection/>
+            <JobSection/>
+            <StartupSection/>
+            <VibeSection/>
             <Collection/>
             <Work/>
             <Faq/>

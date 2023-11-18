@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./button";
 
 const Contact = () => {
     return (
@@ -20,12 +19,8 @@ const Contact = () => {
                     life’s work.
                 </p>
                 <div className="flex flex-col gap-5 mt-10  sm:min-w-[400px]">
-                    <Button
-                        title="Start for free"
-                        className="rounded-2xl"
-                        color="bg-yellow-400"
-                    />
-                    <Button className="rounded-2xl">Join as a company</Button>
+                    <button className="btn btn-yellow">Start for free</button>
+                    <button className="btn">Join as a company</button>
                 </div>
             </div>
             <img

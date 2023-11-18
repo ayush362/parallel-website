@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./button";
 
 const Footer = () => {
     return (
@@ -16,7 +15,7 @@ const Footer = () => {
                             name="fname"
                             className="border-2 border-black my-5 mr-3"
                         />
-                        <Button title="sign up" className="rounded-2xl" color="text-white"/>
+                        <button className="btn btn-yellow">Sign Up</button>
                     </form>
                 </div>
                 <div className="ml-5 sm:ml-0 ">

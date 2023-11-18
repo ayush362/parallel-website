@@ -32,3 +32,20 @@ body {
         transform: translateY(-10%);
     }
 }
+
+.btn {
+    @apply border-2 py-2 px-3 bg-white border-r-4 border-b-4 transition-all rounded-2xl;
+}
+
+.btn:hover {
+    @apply bg-yellow-400 border-black;
+}
+
+.btn-yellow {
+    @apply bg-yellow-400 text-white !important;
+}
+
+.btn-yellow:hover {
+    @apply bg-white text-yellow-400 !important;
+}
+
