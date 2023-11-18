@@ -5,7 +5,7 @@ import React from "react";
 type LayoutPropsType = { children: React.ReactNode }
 export const Layout = ({children}: LayoutPropsType) => {
 return (
-        <main className="overflow-hidden">
+        <main className="overflow-hidden" >
             <Navbar/>
             {children}
             <Footer/>
