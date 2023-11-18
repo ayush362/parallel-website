@@ -6,41 +6,41 @@ export const JobSection = () => {
         {
             iconUrl: "/job.png",
             title: "Growth/CRO Marketer",
-            subtitle: "Goodkarma Amsterdam",
-            employee: "Active Employees",
+            companyName: "Goodkarma",
+            location: "Amsterdam",
         },
         {
             iconUrl: "/job.png",
             title: "Growth/CRO Marketer",
-            subtitle: "Goodkarma Amsterdam",
-            employee: "Active Employees",
+            companyName: "Goodkarma",
+            location: "Amsterdam",
         },
         {
             iconUrl: "/job.png",
             title: "Growth/CRO Marketer",
-            subtitle: "Goodkarma Amsterdam",
-            employee: "Active Employees",
+            companyName: "Goodkarma",
+            location: "Amsterdam",
         },
         {
             iconUrl: "/job.png",
             title: "Growth/CRO Marketer",
-            subtitle: "Goodkarma Amsterdam",
-            employee: "Active Employees",
+            companyName: "Goodkarma",
+            location: "Amsterdam",
         },
         {
             iconUrl: "/job.png",
             title: "Growth/CRO Marketer",
-            subtitle: "Goodkarma Amsterdam",
-            employee: "Active Employees",
+            companyName: "Goodkarma",
+            location: "Amsterdam",
         },
     ];
     return (
         <section className="container mx-auto overflow-hidden  px-5">
             <div className="flex justify-between">
                 <h2 className="font-bold text-3xl text-center">Trending jobs</h2>
-                <p>View All→</p>
+                <p>View All →</p>
             </div>
-            <div className="md:flex gap-5 mt-4">
+            <div className="flex gap-5 mt-4 overflow-x-auto pb-5">
                 {jobCards.map((jobCard, index) => (
                     <JobCard key={index} {...jobCard} />
                 ))}

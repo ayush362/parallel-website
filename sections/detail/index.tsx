@@ -11,7 +11,7 @@ export const DetailSection = () => {
             list: [
                 "Ways of working",
                 "My Portfolio",
-                "Careeer goals"
+                "Career goals"
             ],
             heading: "Build your detailed profile",
             paraText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit incidunt quisquam, voluptatibus ducimus optio illum."
@@ -35,16 +35,16 @@ export const DetailSection = () => {
             list: [
                 "Ways of working",
                 "My Portfolio",
-                "Careeer goals"
+                "Career goals"
             ],
-            heading: "message direct with the hiring team",
+            heading: "Message direct with the hiring team",
             paraText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit incidunt quisquam, voluptatibus ducimus optio illum."
         }
     ]
     return (
-        <section className="container mx-auto px-5 w-full  lg:flex  gap-5  lg:justify-around">
+        <section className="container mx-auto my-10 px-5 w-full flex flex-col lg:flex-row gap-5 lg:justify-around">
             {detailCards.map((card, index) => (
-                <DetailCard key={index} {...card} />
+                <DetailCard key={index} {...card} className="my-5" />
             ))}
         </section>
     );

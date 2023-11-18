@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 type StartupCardPropsType = {
     backgroundUrl: string;
@@ -21,32 +20,28 @@ const StartupCard = (
         employees
     }: StartupCardPropsType) => {
     return (
-        <section
-            className="w-[240px] sm:w-full border-2  border-black rounded-2xl mb-10 hover:translate-x-[-8px] hover:border-r-4 hover:border-b-4">
-            <div>
-                <Image
+        <div
+            className="border border-black rounded-2xl mb-10 overflow-hidden">
+            <div className="relative">
+                <img
                     src={backgroundUrl}
                     alt={title}
-                    width={100}
-                    height={100}
-                    className="w-full"
+                    className="w-full relative"
+                />
+                <img
+                    src={logoUrl}
+                    alt={title}
+                    className="absolute bottom-0 left-0 translate-x-5 translate-y-5 w-10 h-10 rounded-full"
                 />
             </div>
-            <Image
-                src={logoUrl}
-                alt={title}
-                width={30}
-                height={50}
-                className="relative bottom-3 left-8"
-            />
-            <div className="mx-10 flex flex-col gap-3">
+            <div className="p-5 flex flex-col gap-3 mt-5">
                 <h3 className="font-bold">{title}</h3>
                 <p>{location}</p>
                 <p className="underline">{position} →</p>
                 <p>{employees}</p>
                 <button className="btn rounded-3xl">{buttonText}</button>
             </div>
-        </section>
+        </div>
     );
 };
 

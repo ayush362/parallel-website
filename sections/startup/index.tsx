@@ -6,7 +6,7 @@ export const StartupSection = () => {
         <section className="container mx-auto mt-10 px-10">
             <h1 className="font-bold text-4xl mb-5">Top startups</h1>
             <div
-                className="sm:flex gap-10 flex flex-col sm:flex-row justify-center items-center sm:justify-normal sm:items-start">
+                className="sm:flex gap-5 flex flex-col sm:flex-row justify-center items-center sm:justify-normal sm:items-start">
                 <StartupCard
                     backgroundUrl="/st1.png"
                     logoUrl="/sl1.png"
