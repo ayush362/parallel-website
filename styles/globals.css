@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #fefcf8;
 }
@@ -48,4 +52,3 @@ body {
 .btn-yellow:hover {
     @apply bg-white text-yellow-400 !important;
 }
-

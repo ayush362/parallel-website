@@ -16,8 +16,8 @@ export const CollectionSection = () => {
         {background: "/cl6.jpeg", title: "Giving Back", companies: 1, jobs: 1},
     ];
     return (
-        <section className="container mx-auto mt-10 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        <section id="collection-section" className="container mx-auto mt-10 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {collectionCard.map((collectionCard, index) => (
                     <CollectionCard key={index} {...collectionCard} />
                 ))}
